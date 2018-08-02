@@ -20,7 +20,7 @@ export class HomePage {
 
   login() {
   	this.http.post(
-  		"http://104.236.73.253:8000/login/", 
+  		"http://104.236.73.253/login/", 
   		{
   			"username": this.username, 
   			"password": this.password

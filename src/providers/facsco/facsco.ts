@@ -21,10 +21,10 @@ export class FacscoProvider {
   }
 
   getProducts() {
-  	return this.http.get("http://104.236.73.253:8000/products/", {headers: this.header});
+  	return this.http.get("http://104.236.73.253/products/", {headers: this.header});
   }
 
   submitOrder(orderDetails) {
-  	return this.http.post("http://104.236.73.253:8000/order/", orderDetails, {headers: this.header})
+  	return this.http.post("http://104.236.73.253/order/", orderDetails, {headers: this.header})
   }
 }
