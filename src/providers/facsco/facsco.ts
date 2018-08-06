@@ -24,6 +24,14 @@ export class FacscoProvider {
   	return this.http.get("http://104.236.73.253/products/", {headers: this.header});
   }
 
+  getOrders() {
+  	return this.http.get("http://104.236.73.253/order/", {headers: this.header});
+  }
+
+  getOrder(pk: number) {
+  	return this.http.get("http://104.236.73.253/order/" + pk +"/", {headers: this.header});
+  }
+
   submitOrder(orderDetails) {
   	return this.http.post("http://104.236.73.253/order/", orderDetails, {headers: this.header})
   }

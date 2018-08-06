@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { FacscoProvider } from '../../providers/facsco/facsco';
+import { OrdersPage } from '../orders/orders';
 
 @Component({
   selector: 'page-list',
@@ -41,6 +42,8 @@ export class ListPage {
     if (orderDetails['products'].length > 0) {
       this.facsco.submitOrder(orderDetails).subscribe((response) => {
         console.log(response);
+        this.navCtrl.insert(0, OrdersPage);
+        this.navCtrl.popToRoot();
       });
     }
   }

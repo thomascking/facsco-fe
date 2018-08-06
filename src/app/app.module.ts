@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { OrdersPage } from '../pages/orders/orders';
+import { DetailsPage } from '../pages/details/details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +19,9 @@ import { FacscoProvider } from '../providers/facsco/facsco';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    OrdersPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { FacscoProvider } from '../providers/facsco/facsco';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    OrdersPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,

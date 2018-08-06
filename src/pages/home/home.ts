@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { FacscoProvider } from '../../providers/facsco/facsco';
 
-import { ListPage } from '../list/list';
+import { OrdersPage } from '../orders/orders';
 
 @Component({
   selector: 'page-home',
@@ -27,7 +27,7 @@ export class HomePage {
   		}
 	).subscribe((response) => {
 		this.facsco.setToken(response['token']);
-		this.navCtrl.insert(0, ListPage);
+		this.navCtrl.insert(0, OrdersPage);
 		this.navCtrl.popToRoot();
 	});
   }
